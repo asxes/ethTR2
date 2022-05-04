@@ -1,3 +1,4 @@
+import 'package:eth_tr/sayfaYapisi.dart';
 import 'package:flutter/material.dart';
 
 class AudioWidget extends StatelessWidget {
@@ -7,11 +8,18 @@ class AudioWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: const [
+        children:  [
           Card(
             color: Colors.amber,
             child: ListTile(
-             // onTap: ,
+
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  Bolum1()),
+                );
+              },
+
               leading: Icon(Icons.album),
               title: Text('Genel Bakış'),
               subtitle: Text('Ethereum, Smart Kontrat ve EVM nedir?'),
@@ -110,7 +118,7 @@ class AudioWidget extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.album),
               title: Text('Enum '),
-              subtitle: Text('Solidity dilinde numara yaoıları'),
+              subtitle: Text('Solidity dilinde numara yapıları'),
             ),
           ),
           Card(
@@ -284,7 +292,7 @@ class AudioWidget extends StatelessWidget {
             color: Colors.amber,
             child: ListTile(
               leading: Icon(Icons.album),
-              title: Text('Libraries  '),
+                title: Text('Libraries  '),
               subtitle: Text('Solidity dilinde kullanılan Libraries '),
             ),
           ),
