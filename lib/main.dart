@@ -56,7 +56,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        backgroundColor: Colors.red,
+        title: Center(child: const Text('Solidity Öğreniyorum')),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -65,8 +66,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.red,
+            label: 'Solidity',
+            backgroundColor: Colors.redAccent,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
@@ -85,7 +86,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.deepPurple[100],
         onTap: _onItemTapped,
       ),
     );
