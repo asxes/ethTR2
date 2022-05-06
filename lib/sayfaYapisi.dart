@@ -1,43 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
+//import 'package:flutter/painting.dart';
 
 var basliklar = [
-  "Genel Bakış",//0
-  "Kurulum ve gerekli programlar",//1
-  "Genel sözdizimi (Syntax)",//2
-  "İlk Solidity programım",//3
-  "Solidity'de yorum satırları",//4
-  "Tipler",//5
-  "Değişkenler",//6
-  "Değişken tipleri",//7
-  "Operatörler",//8
-  "Mantıksal İfadeler",//9
-  "Stringler",//10
-  "Diziler",//11
-  "Enum",//12
-  "Struct",//13
-  "Mapping",//14
-  "Dönüşümler",//15
-  "Ether birimleri",//16
-  "Özel değişkenler",//17
-  "Fonksiyonlar",//18
-  "Fonksiyonlar değiştiriciler",//19
-  "View Fonksiyonlar",//20
-  "Pure Fonksiyonlar",//21
-  "Fallback Fonksiyonları",//22
-  "Özel Fonksiyonlar",//23
-  "Fonksiyon aşırı yükleme",//24
-  "Matematiksel Fonksiyonlar",//25
-  "Kriptografik Fonksiyonlar",//26
-  "Withdraw çekme",//27
-  "Erişim sınırlandırma",//28
-  "Kontratlar",//29
-  "Solidity Inheritance",//30
-  "Constructors",//31
-  "Interfaces",//32
-  "Libraries",//33
-  "Events",//34
-  "Error Handling"//35
+  "Genel Bakış", //0
+  "Kurulum ve gerekli programlar", //1
+  "Genel sözdizimi (Syntax)", //2
+  "İlk Solidity programım", //3
+  "Solidity'de yorum satırları", //4
+  "Tipler", //5
+  "Değişkenler", //6
+  "Değişken tipleri", //7
+  "Operatörler", //8
+  "Mantıksal İfadeler", //9
+  "Stringler", //10
+  "Diziler", //11
+  "Enum", //12
+  "Struct", //13
+  "Mapping", //14
+  "Dönüşümler", //15
+  "Ether birimleri", //16
+  "Özel değişkenler", //17
+  "Fonksiyonlar", //18
+  "Fonksiyonlar değiştiriciler", //19
+  "View Fonksiyonlar", //20
+  "Pure Fonksiyonlar", //21
+  "Fallback Fonksiyonları", //22
+  "Özel Fonksiyonlar", //23
+  "Fonksiyon aşırı yükleme", //24
+  "Matematiksel Fonksiyonlar", //25
+  "Kriptografik Fonksiyonlar", //26
+  "Withdraw çekme", //27
+  "Erişim sınırlandırma", //28
+  "Kontratlar", //29
+  "Solidity Inheritance", //30
+  "Constructors", //31
+  "Interfaces", //32
+  "Libraries", //33
+  "Events", //34
+  "Error Handling" //35
 ];
 
 class Bolum0 extends StatelessWidget {
@@ -67,13 +67,42 @@ class Bolum0 extends StatelessWidget {
                 ),
               ),
             ),
-            const Text(
-              """
-          Buraya konu yazılacak
-           
-                """,
-              style: TextStyle(
-                fontSize: 25,
+            RichText(
+              text: const TextSpan(
+                text: """Solidity
+
+2015 yılında duyurulmuş olan ve Ethereum zinciri üzerinde akıllı kontrat yazmaya yarayan nesne tabanlı (Obect Oriented) bir programlama dilidir.
+
+EVM (Ethereum Virtual Machine)
+
+EVM , Solidity dilinde yazılmış olan kodların işlendiği yer olarak adlandırılabilir. Bildiğiniz üzere bilgisayarlar sadece 1 ve 0'lardan anlarlar. Yani Solidity'de yazacağımız her kod EVM'ye ulaşmadan önce Bytecode denilen bilgisayarın anlayacağı şekilde 1 ve 0'lara dönüşür. Bunlar EVM'de işlenerek kontratlar çalıştırılır. Yani sistemin beyni gibidir.
+
+Akıllı kontratlar
+
+Akıllı kontratların aracıları ( Banka, servis sağlayıcılar vb.. ) ortadan kaldırarak sadece matematiğe dayalı güvenilir , özgür ve sınırları olmayan bir platform sunması birçok kişinin ilgisini çekmekle beraber, neredeyse sınırsız bir dünyanın kapılarını araladı. Peki nedir bu akıllı kontratlar?
+
+Bir kez yazılıp blok zincire yüklendiğinde , değiştirilemez, hack edilemez (tabi Blockchain ve Solidity diline hakim iseniz ve kontratınızda açık yoksa), durdurulamaz bir sözleşmedir. Peer to Peer (p2p) yani aracıya ihtiyaç duymayan kişilerin kendi aralarında sözleşme yapmalarına imkan tanır. Sözleşmelerin temeli matematiğe dayandığından matematik kadar güvenilirdirler. Tabi ki güvenilir olan her şey aynı zamanda değerlidir de. İşte Blok zincir ve kripto paraların değerli olmasının sebebi de budur.
+
+Basit bir Solidity kodu aşağıda ki şekildedir. \n """,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            Image.asset("asset/images/simpleContract.jpg"),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Geri',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
             ),
           ],
@@ -110,13 +139,33 @@ class Bolum1 extends StatelessWidget {
                 ),
               ),
             ),
-            const Text(
-              """
-          Buraya konu yazılacak
-           
-                """,
-              style: TextStyle(
-                fontSize: 25,
+            RichText(
+              textScaleFactor: 0.9,
+              //  overflow: TextOverflow.fade,
+              textAlign: TextAlign.justify,
+              text: const TextSpan(
+                text:
+                    """\n    Bir Windows kullanıcısı ve  Solidity'e yeni başlayan bir yazılımcı olduğunuz için Node.Js ve NPM gibi detay konuları atlayıp, sadece tarayıcı üzerinden çalışan ve herhangi bir kuruluma ihtiyaç duymayan Remix, Solidity dili ile Ethereum akıllı kontratlarını oluşturup test edebilmemize yardım eder. \n
+     Ethereum'un kendi IDE'si Remix (https://remix.ethereum.org) üzerinden devam edeceğiz. 
+             """,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                ),
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Geri',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
             ),
           ],
@@ -1673,4 +1722,3 @@ class Bolum35 extends StatelessWidget {
 //     );
 //   }
 // }
-

@@ -29,14 +29,14 @@ flutter:
     - family: PTSerif
       fonts:
         - asset: asset/fonts/PTSerif-Bold.ttf
+  assets:
+    - asset/images/simpleContract.jpg
 
 
   uses-material-design: true
 
   # To add asset to your application, add an asset section, like this:
-  # asset:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
